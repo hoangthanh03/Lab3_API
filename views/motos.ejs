@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>List Motor</h1>
+    <table>
+        <thead>
+            <tr>
+                <td>MotorName</td>
+                <td>Date</td>
+                <td>The Firm</td>
+                <td>Price</td>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% if (motos && motos.length > 0) { %>
+                <% motors.forEach(function(moto) { %>
+                    <tr>
+                        <td><%= moto.motoName %></td>
+                        <td><%= moto.date %></td>
+                        <td><%= moto.theFirm %></td>
+                        <td><%= moto.price %></td>
+                   
+                    </tr>
+                <% }); %>
+            <% } else { %>
+                <tr>
+                    <td colspan="4"><%= message %></td>
+                </tr>
+            <% } %>
+        </tbody>
+        
+        
+    </table>
+    
+</body>
+</html>
